@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+
+<body>
+
+    <!-- login form -->
+    <div class="container">
+        <div class="icon-close">
+            <img src="close-icon.png" alt="">
+        </div>
+        <div class="form-box login">
+            <h5 style="font-size: 1em; text-align: center; color: rgb(16, 63 , 107); "> LOGIN FORM</h5>
+            <br><br>
+            <form action="#" name="form1">
+                <div class="input-box">
+
+                    <input type="email" name="text1" id="username" onclick="ValidateEmail(document.form1.text1)" required>
+                    <label>Email</label>
+                    <error id="alert"></error>
+
+
+                    <br>
+                    <br>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="password" required>
+                    <label>Password</label>
+                    <img src="eye-close.png" style=" position: absolute; top:0.5em; right: 8px;" id="eyeIcon" alt="">
+                    <error id="alert"></error>
+
+                </div>
+                
+                <div class="remember-forget">
+                    <label style="font-size: 11px;"><input type="checkbox">Remember me</label>
+                    <a href="#">Forgot Password</a>
+                </div>
+
+                <button value="submit">LOGIN</button>
+                <div class="login-register">
+                    <p>Don't have an account<a href="#" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+
+<!-- registration form -->
+
+        <div class="form-box register">
+            <br>
+            <h5 style="font-size: 1em; text-align: center; color: rgb(16, 63 , 107);position: absolute; top: 22px; left: 48px;"> REGISTRATION FORM</h5>
+            <br><br>
+            <form action="#" name="form2"  onsubmit="alert('Form submit successfully'), validate()">
+                <div class="input-box">
+
+                    <input type="text" required>
+                    <label>Username</label>
+                    <br>
+                    <br>
+                </div>
+                <div class="input-box">
+
+                    <input type="email"  required>
+                    <label>Email</label>
+                    <br>
+                    <br>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="text2" id="Rpassword" required onkeyup="CheckPassword(document.form2.text2)">
+                    <label>Password</label>
+                    <img src="eye-close.png" style=" position: absolute; top:0.5em; right: 8px;" id="eye1" alt="">
+                    <error id="alert2" style="position: absolute; top: 95%; left: 2%; color: red; font-size: 10px;"></error>
+
+                </div>
+            
+                <div class="input-box">
+                <input type="password" id="Cpassword"  required
+                    onkeyup="check(this)">
+                <label>Confirm Password</label>
+                <error id="alert1"></error>
+                </div>
+                <div class="remember-forget">
+                    <label style="font-size: 11px;"><input type="checkbox">I accept the terms and conditions</label>
+                    
+                </div>
+
+                <button value="submit">REGISTER</button>
+                <div class="login-register">
+                    <p>Already have an account<a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+
+
+
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
